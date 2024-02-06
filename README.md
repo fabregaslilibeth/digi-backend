@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a simple To-Do List application built with Vue.js and GraphQL. It allows users to manage their tasks by adding, updating, and deleting them. The application utilizes GraphQL mutations to interact with the backend server for task management operations.
+This project is a simple To-Do List application built with Laravel and GraphQL. It allows users to manage their tasks by adding, updating, and deleting them.
 
 ## Prerequisites
 To run this application, you need to have Docker installed on your machine.
