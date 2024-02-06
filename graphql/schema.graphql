@@ -3,47 +3,19 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 
 "Indicates what fields are available at the top level of a query operation."
 type Query {
-    "Find a single user by an identifying attribute."
-    user(
-      "Search by primary key."
-      id: ID @eq @rules(apply: ["prohibits:email", "required_without:email"])
-
-      "Search by email address."
-      email: String @eq @rules(apply: ["prohibits:id", "required_without:id", "email"])
-    ): User @find
-
-    "List multiple users."
-    users: [User!]! @all
-
     "List multiple tasks."
     tasks: [Task!]! @all
 }
 
 type Mutation {
   createTask(title: String!): Task @create
-  updateTask(id: ID!, title: String!, is_completed: Boolean!): Task @update
+  updateTask(id: ID!, state: String!): Task @update
   deleteTask(id: ID! @whereKey): Task @delete
 }
 
-"Account of a person who utilizes this application."
-type User {
-    "Unique primary key."
-    id: ID!
-
-    "Non-unique name."
-    name: String!
-
-    "Unique email address."
-    email: String!
-
-    "When the email was verified."
-    email_verified_at: DateTime
-
-    "When the account was created."
-    created_at: DateTime!
-
-    "When the account was last updated."
-    updated_at: DateTime!
+enum TaskState {
+  TODO
+  DONE
 }
 
 
@@ -54,8 +26,8 @@ type Task {
     "What is the next thing to do"
     title: String!
 
-    "Is the task completed, default is false"
-    is_completed: Boolean!
+    "Is the task completed, default is todo"
+    state: TaskState! # Used enum type for state
 
     "When the task was created."
     created_at: DateTime!
