@@ -58,3 +58,5 @@ To run this application, you need to have Docker installed on your machine.
 
 For the short documentation on my approach on this project, please [Go here](https://docs.google.com/document/d/1SEbf4IcNomcF6AKVGtjHm45EF1wlcSUljMNwlClhN5g/edit){:target="_blank"}
 
+
+<a target="_blank" href="https://docs.google.com/document/d/1SEbf4IcNomcF6AKVGtjHm45EF1wlcSUljMNwlClhN5g/edit">here</a> 
