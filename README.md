@@ -36,21 +36,25 @@ To run this application, you need to have Docker installed on your machine.
 
 4. Generate an application key:
 
-  ```
-  php artisan key:generate
-  ```
+    ```
+    php artisan key:generate
+    ```
 
 5. Update the .env file with your database and other environment configurations.
   Run database migrations and seeders:
 
-  ```
-  php artisan migrate --seed
-  ```
+    ```
+    php artisan migrate --seed
+    ```
 
 6. Build the Docker image:
-  ```
-  docker-compose build
-  ```
+    ```
+    docker-compose build
+    ```
 
 7. Access the application in your web browser, default is http://digi-backend.test/. You will see the Laravel default welcome page.
+
+
+
+For the short documentation on my approach on this project, please [Go here](https://docs.google.com/document/d/1SEbf4IcNomcF6AKVGtjHm45EF1wlcSUljMNwlClhN5g/edit)
 
